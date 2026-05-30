@@ -1,0 +1,156 @@
+@startmindmap
+' <style>
+' mindmapDiagram {
+'   node {
+'     BackgroundColor lightGreen
+'   }
+'   boxless {
+'     FontColor darkgreen
+'   }
+' }
+' </style>
+* ==RAG (Retrieval-Augmented Generation)
+
+left side
+**[#D9F9DF] ==Ingestion
+
+
+**[#ffec99]:==Chunking
+====
+* Fixed Size Chunking
+* Token Based Chunking
+* Recursive Character Text Splitting
+* Semantic Chunking
+* Sentence Window Chunking
+* Hierarchical Markdown Chunking
+* Agnetic Chunking
+* Document Chunking
+;
+
+**[#a5d8ff] ==Indexing
+***[#a5d8ff]:==Chunk Opimization
+Optimize chunks size used for embbeding
+====
+* Semantic Splitter
+;
+***[#a5d8ff]:==Multi-represent indexing
+Convert documents into compact retrieval units
+====
+* Parent Document
+* Dense X
+;
+***[#a5d8ff]:==Specialized Embeddings
+Document-specific embeddings
+====
+* Fine-tuned Embeddings
+* ColBERT
+;
+***[#a5d8ff]:==Hierarchical Indexing
+Tree of document summarization at various abstraction levels
+====
+*RAPTOR
+;
+
+**[#7AE2CF]:==Embedding
+====
+* Transformers Based Embeddings
+* BERT
+* SBERT
+;
+
+right side
+**[#AEE2FF] ==Retrieval
+***[#ffc9c9] ==Query Translation
+****[#ffc9c9]:==Query Decomposition
+==Decompose or rephase==
+* Multi_query
+* Step-back
+* RAG-Fusion
+;
+****[#ffc9c9]:==Psuedo-document Generation
+==Hypothetical documents==
+* HyDE
+;
+
+***[#ffd8a8]==Routing
+****[#ffd8a8]:==Logical Routing
+====
+Let LLM decise where to retrieve from
+;
+****[#ffd8a8]:==Semantic Routing
+====
+Embed question and choose prompt
+based on similarity
+;
+*****[#ffd8a8]==Query Embedding
+
+***[#ffec99]==Query Construction
+****[#ffec99]:==Relational DBs
+Natural language to SQL
+====
+* Text-to-SQL
+;
+****[#ffec99]:==Graph DBs
+Natural language to Cypher
+====
+* Text-to-Cypher
+;
+****[#ffec99]:==Vector DBs
+Auto-generate metadata filters from query
+====
+*Self-Query retrieval
+;
+*****[#ffec99]:==Vector Indexing
+====
+*Flat Indexing (Extract Match)
+*LSH (Locality-Sensitive Hashing)
+*HNSW (Hierarchical Navigable Small World)
+*IVF (Inverted File Index)
+*PQ (Product Quantization)
+;
+
+*****[#ffec99]:==Keyword Indexing
+====
+* TF-IDF Indexing
+* BM25 Indexing
+;
+*****[#ffec99]:== Hybrid Indexing
+;
+
+***[#b2f2bb] ==Retrieval
+
+****[#b2f2bb]:==Ranking
+Rank or filter retrieved documents
+====
+* Re-Rank
+* RankGPT
+* RAG-Fusion
+* Cross-Encoder Reranking
+* ColBERT Reranking
+* LMM-Based Reranking
+* Cohere Reranking API
+;
+
+****[#b2f2bb]:==Refinement
+*CRAG
+;
+
+****[#b2f2bb]:==Active Retrieval
+Re-retrieve from new data sourece if retrieved documents are not relevant
+====
+* ReAct
+;
+
+**[#d0bfff] ==Generation
+***[#d0bfff] ==Multi-Step Reasoning (Chain of Thought)
+***[#d0bfff] ==Answer Verification
+***[#d0bfff] ==Streaming Responses
+
+
+**[#D9F9DF]:==Evaluation
+====
+* Ragas
+* DeepEval
+;
+
+@endmindmap
