@@ -15,4 +15,6 @@ dependencies = [
     "langgraph>=1.2.2",
     "mcp[cli]>=1.27.2",
     "voyageai>=0.3.7",
+    "pypdf>=6.12.2",
+    "fonttools>=4.67.0",
 ]
